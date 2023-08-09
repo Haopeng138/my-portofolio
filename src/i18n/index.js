@@ -12,12 +12,16 @@ const messages = {
   },
  
 }
+if (!localStorage.getItem('i18n')) {
+  localStorage.setItem('i18n', 'en')
+}
+
 
 const i18n = createI18n({
   legacy: false,
   locale: localStorage.getItem('i18n'), // 设置语种
   messages, // 设置全局当地语言包,
-  fallbackLocale: 'zh',
+  fallbackLocale: 'en',
 })
  
 export default i18n

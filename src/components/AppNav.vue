@@ -16,6 +16,7 @@
             <div class="nav__link">
               <i class="alicon alicon-fanyi1 nav__icon nav__icon--translate"
                 @click="changeLanguage"></i>
+        
               <a class="nav__link" id="translate">中/en</a>
             </div>
           </li>
