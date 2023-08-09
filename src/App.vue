@@ -1,6 +1,7 @@
 <script setup>
 import AppNav from './components/AppNav.vue'
-import AppHome from './components/AppHome.vue';
+import AppHome from './components/AppHome.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AppHome from './components/AppHome.vue';
   <main class="main">
     <AppHome></AppHome>
   </main>
+    <AppFooter></AppFooter>
 </template>
 
 <style lang="scss">
