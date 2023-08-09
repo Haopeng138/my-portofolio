@@ -12,7 +12,7 @@ const messages = {
   },
  
 }
- 
+
 const i18n = createI18n({
   legacy: false,
   locale: localStorage.getItem('i18n'), // 设置语种
