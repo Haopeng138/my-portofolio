@@ -4,6 +4,7 @@ import AppHome from './components/AppHome.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppAbout from './components/AppAbout.vue';
 import AppQualification from './components/AppQualification.vue';
+import AppContact from './components/AppContact.vue';
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import AppQualification from './components/AppQualification.vue';
     <AppHome></AppHome>
     <AppAbout></AppAbout>
     <AppQualification></AppQualification>
+    <AppContact></AppContact>
   </main>
     <AppFooter></AppFooter>
 </template>
