@@ -2,6 +2,7 @@
 import AppNav from './components/AppNav.vue'
 import AppHome from './components/AppHome.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppAbout from './components/AppAbout.vue';
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AppFooter from './components/AppFooter.vue'
   </header>
   <main class="main">
     <AppHome></AppHome>
+    <AppAbout></AppAbout>
   </main>
     <AppFooter></AppFooter>
 </template>
