@@ -3,6 +3,7 @@ import AppNav from './components/AppNav.vue'
 import AppHome from './components/AppHome.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppAbout from './components/AppAbout.vue';
+import AppQualification from './components/AppQualification.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import AppAbout from './components/AppAbout.vue';
   <main class="main">
     <AppHome></AppHome>
     <AppAbout></AppAbout>
+    <AppQualification></AppQualification>
   </main>
     <AppFooter></AppFooter>
 </template>
