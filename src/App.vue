@@ -24,4 +24,5 @@ import AppSkill from './components/AppSkill.vue';
 
 <style lang="scss">
 @import "./styles/index.scss";
+
 </style>
