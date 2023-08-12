@@ -1,117 +1,122 @@
 <template>
-    <div class="playground" ref="playground">
-        <div class="list">
-            <div class="list-item" v-for="(item, index) in items" :key="index" :data-order="index">
-                <!-- Your item content here -->
-                <img :src="getImageUrl(index)" :alt="index" width="40px" height="40px"/>
+    <section class="skills section" id="skills">
+
+
+        <h2 class="section__title skills__title"><i class="alicon alicon-daima skills__icon"></i>{{ $t("skills__title") }}
+        </h2>
+        <span class="section__subtitle">{{ $t("skills__subtitle") }}</span>
+        <div class="playground">
+            <div class="animation-container">
+                <div class="list">
+                    <div v-for="item in items">
+                        <div :data-order="item.order" class="list-item">
+                            <img :src="item.imageUrl" alt="item" />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
 </template>
-  
-<script>
 
-export default {
+<script setup>
+const items = [
+    { order: 0, imageUrl: '/src/assets/icons/Angular.png' },
+    { order: 1, imageUrl: '/src/assets/icons/Css.png' },
+    { order: 2, imageUrl: '/src/assets/icons/Docker.png' },
+    { order: 3, imageUrl: '/src/assets/icons/Html.png' },
+    { order: 2, imageUrl: '/src/assets/icons/Java.png' },
+    { order: 1, imageUrl: '/src/assets/icons/JavaScript.png' },
+    { order: 0, imageUrl: '/src/assets/icons/Kotlin.svg.png' },
+    { order: 0, imageUrl: '/src/assets/icons/NodeJs.png' },
+    { order: 1, imageUrl: '/src/assets/icons/Python.png' },
+    { order: 2, imageUrl: '/src/assets/icons/SpringBoot.png' },
+    { order: 3, imageUrl: '/src/assets/icons/Vue.png' },
+    { order: 0, imageUrl: '/src/assets/icons/Git.png'}
+]
 
-    data() {
-        return {
-            playGround: document.querySelector(".playground"),
-            list: document.querySelector(".list"),
-            listItems: document.querySelectorAll(".list-item"),
-            items: [
-                "Angular.png",
-                "Docker.png",
-                "Html.png",
-                "Java.png",
-                "JavaScript.png",
-                "Css.png",
-                "NodeJs.png",
-                "Python.png",
-                "Vue.png",
-                "SpringBoot.png",
-                "Kotlin.svg.png"
-            ],
-            animationsMap: new Map(),
-        };
-    },
-    mounted() {
-        this.initializeItems();
-        this.updateMap();
-        this.updateStyle();
-        window.addEventListener("scroll", this.updateStyle);
-    },
-    beforeDestroy() {
-        window.removeEventListener("scroll", this.updateStyle);
-    },
-    methods: {
-        getImageUrl(item) {
-            console.log(item);
-
-            return "/src/assets/icons/" + this.items[item];
-        },
-        createAnimation(scrollStart, scrollEnd, valueStart, valueEnd) {
-            return function (scroll) {
-                if (scroll <= scrollStart) {
-                    return valueStart;
-                }
-                if (scroll >= scrollEnd) {
-                    return valueEnd;
-                }
-                return (
-                    valueStart +
-                    ((valueEnd - valueStart) * (scroll - scrollStart)) / (scrollEnd - scrollStart)
-                );
-            };
-        },
-        getDomAnimation(scrollStart, scrollEnd, dom) {
-            scrollStart = scrollStart + dom.dataset.order * 600;
-            const opacityAnimation = this.createAnimation(scrollStart, scrollEnd, 0, 1);
-            const opacity = function (scroll) {
-                return opacityAnimation(scroll);
-            };
-            const scaleAnimation = this.createAnimation(scrollStart, scrollEnd, 0.5, 1);
-            const xAnimation = this.createAnimation(
-                scrollStart,
-                scrollEnd,
-                this.$refs.list.clientWidth / 2 - dom.offsetLeft - dom.clientWidth / 2,
-                0
-            );
-            const yAnimation = this.createAnimation(
-                scrollStart,
-                scrollEnd,
-                this.$refs.list.clientHeight / 2 - dom.offsetTop - dom.clientWidth / 2,
-                0
-            );
-            const transform = function (scroll) {
-                const result = `translate(${xAnimation(scroll)}px,${yAnimation(scroll)}px) scale(${scaleAnimation(scroll)})`;
-                return result;
-            };
-            return {
-                opacity,
-                transform,
-            };
-        },
-        initializeItems() {
-            this.items = Array.from(this.$el.querySelectorAll(".list-item"));
-        },
-        updateMap() {
-            this.animationsMap.clear();
-            const playGroundRect = this.$refs.playground.getBoundingClientRect();
-            const scrollStart = playGroundRect.top + window.scrollY;
-            const scrollEnd = playGroundRect.bottom + window.scrollY - window.innerHeight;
-            for (const item of this.items) {
-                this.animationsMap.set(item, this.getDomAnimation(scrollStart, scrollEnd, item));
-            }
-        },
-        updateStyle() {
-            const scroll = window.scrollY;
-            for (const [dom, value] of this.animationsMap) {
-                for (const cssPro in value) {
-                    dom.style[cssPro] = value[cssPro](scroll);
-                }
-            }
-        },
-    },
-};
 </script>
-  
+
+<style lang="scss" scoped>
+* {
+    padding: 0;
+    list-style: none;
+}
+
+
+.playground {
+    position: relative;
+}
+
+.animation-container {
+    position: sticky;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* 
+.list {
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+.list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.list-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 50px 15px;
+    border-color: rgb(237, 235, 240);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.skills {
+  &__container {
+    row-gap: 0;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2-5);
+    cursor: pointer;
+  }
+  &__icon {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+  &__title {
+    margin-bottom: var(--mb-0-75);
+  }
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+  }
+  &__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+  }
+}
+</style>
