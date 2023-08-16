@@ -10,6 +10,7 @@
 
         <div class="home__three" id="home__three">
           <!-- <MyOfficeScene></MyOfficeScene> -->
+          <img src="/src/assets/img/githubBack.jpg" alt="githubBack" />
         </div>
 
         <div class="home__data">
@@ -55,9 +56,9 @@ export default {
       for (let i = 0; i < text.length; i++) {
         setTimeout(() => {
           if (type === 'write') {
-            titleTextArr.value.push(text[i])
+            titleTextArr.push(text[i])
           } else {
-            titleTextArr.value.pop()
+            titleTextArr.pop()
           }
           if (i === titleText.length - 1) {
             setTimeout(() => {
@@ -122,7 +123,8 @@ export default {
   &__three {
     width: 100%;
     height: 240px;
-
+    border-radius: 10%;
+    border-color: var(--first-color);
     @include min-screen(568px) {
       order: 1;
       height: 340px;

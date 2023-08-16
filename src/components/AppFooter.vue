@@ -3,7 +3,7 @@
     <div class="footer__bg">
       <div class="footer__container container grid">
         <div>
-          <h1 class="footer__title">cosycosy</h1>
+          <h1 class="footer__title">Haopeng</h1>
           <span class="footer__subtitle" >{{ $t('home__subtitle') }}</span>
         </div>
 
@@ -27,7 +27,7 @@
       </div>
 
       <p class="footer__copy">
-        &#169; COSYCOSY.Copy from
+        &#169; Haopeng138 copy from
         <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode"
           target="_blank">Bedimcode</a>
       </p>
