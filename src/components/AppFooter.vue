@@ -11,9 +11,9 @@
           <li>
             <a href="#skills" class="footer__link" >{{ $t('skills') }}</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#portfolio" class="footer__link" >{{ $t('portfolio') }}</a>
-          </li>
+          </li> -->
           <li>
             <a href="#contact" class="footer__link" >{{ $t('contact') }}</a>
           </li>

@@ -64,11 +64,11 @@
           href: '#skills',
           icon: 'alicon-yuzhijineng',
         },
-        {
-          name: 'portfolio',
-          href: '#portfolio',
-          icon: 'alicon-wodezuopin',
-        },
+        // {
+        //   name: 'portfolio',
+        //   href: '#portfolio',
+        //   icon: 'alicon-wodezuopin',
+        // },
         {
           name: 'contact',
           href: '#contact',
