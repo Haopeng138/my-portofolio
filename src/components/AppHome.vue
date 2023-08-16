@@ -10,7 +10,7 @@
 
         <div class="home__three" id="home__three">
           <!-- <MyOfficeScene></MyOfficeScene> -->
-          <img src="/src/assets/img/githubBack.jpg" alt="githubBack" />
+          <img src="/assets/img/githubBack.jpg" alt="githubBack" />
         </div>
 
         <div class="home__data">

@@ -22,18 +22,18 @@
 
 <script setup>
 const items = [
-    { order: 0, imageUrl: '/src/assets/icons/Angular.png' },
-    { order: 1, imageUrl: '/src/assets/icons/Css.png' },
-    { order: 2, imageUrl: '/src/assets/icons/Docker.png' },
-    { order: 3, imageUrl: '/src/assets/icons/Html.png' },
-    { order: 2, imageUrl: '/src/assets/icons/Java.png' },
-    { order: 1, imageUrl: '/src/assets/icons/JavaScript.png' },
-    { order: 0, imageUrl: '/src/assets/icons/Kotlin.svg.png' },
-    { order: 0, imageUrl: '/src/assets/icons/NodeJs.png' },
-    { order: 1, imageUrl: '/src/assets/icons/Python.png' },
-    { order: 2, imageUrl: '/src/assets/icons/SpringBoot.png' },
-    { order: 3, imageUrl: '/src/assets/icons/Vue.png' },
-    { order: 0, imageUrl: '/src/assets/icons/Git.png'}
+    { order: 0, imageUrl: '/assets/icons/Angular.png' },
+    { order: 1, imageUrl: '/assets/icons/Css.png' },
+    { order: 2, imageUrl: '/assets/icons/Docker.png' },
+    { order: 3, imageUrl: '/assets/icons/Html.png' },
+    { order: 2, imageUrl: '/assets/icons/Java.png' },
+    { order: 1, imageUrl: '/assets/icons/JavaScript.png' },
+    { order: 0, imageUrl: '/assets/icons/Kotlin.svg.png' },
+    { order: 0, imageUrl: '/assets/icons/NodeJs.png' },
+    { order: 1, imageUrl: '/assets/icons/Python.png' },
+    { order: 2, imageUrl: '/assets/icons/SpringBoot.png' },
+    { order: 3, imageUrl: '/assets/icons/Vue.png' },
+    { order: 0, imageUrl: '/assets/icons/Git.png'}
 ]
 
 </script>

@@ -3,7 +3,7 @@
     <h2 class="section__title" >{{ $t('about__title') }}</h2>
     <span class="section__subtitle" >{{ $t('about__subtitle') }}</span>
     <div class="about__container container grid">
-      <img src="/src/assets/img/device.png" class="about__img">
+      <img src="/assets/img/device.png" class="about__img">
 
       <div class="about__data">
         <p class="about__description">
