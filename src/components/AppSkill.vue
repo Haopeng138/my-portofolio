@@ -22,18 +22,18 @@
 
 <script setup>
 const items = [
-    { order: 0, imageUrl: '/assets/img/Angular.png' },
-    { order: 1, imageUrl: '/assets/img/Css.png' },
-    { order: 2, imageUrl: '/assets/img/Docker.png' },
-    { order: 3, imageUrl: '/assets/img/Html.png' },
-    { order: 2, imageUrl: '/assets/img/Java.png' },
-    { order: 1, imageUrl: '/assets/img/JavaScript.png' },
-    { order: 0, imageUrl: '/assets/img/Kotlin.svg.png' },
-    { order: 0, imageUrl: '/assets/img/NodeJs.png' },
-    { order: 1, imageUrl: '/assets/img/Python.png' },
-    { order: 2, imageUrl: '/assets/img/SpringBoot.png' },
-    { order: 3, imageUrl: '/assets/img/Vue.png' },
-    { order: 0, imageUrl: '/assets/img/Git.png'}
+    { order: 0, imageUrl: '/my-portofolio/assets/img/Angular.png' },
+    { order: 1, imageUrl: '/my-portofolio/assets/img/Css.png' },
+    { order: 2, imageUrl: '/my-portofolio/assets/img/Docker.png' },
+    { order: 3, imageUrl: '/my-portofolio/assets/img/Html.png' },
+    { order: 2, imageUrl: '/my-portofolio/assets/img/Java.png' },
+    { order: 1, imageUrl: '/my-portofolio/assets/img/JavaScript.png' },
+    { order: 0, imageUrl: '/my-portofolio/assets/img/Kotlin.svg.png' },
+    { order: 0, imageUrl: '/my-portofolio/assets/img/NodeJs.png' },
+    { order: 1, imageUrl: '/my-portofolio/assets/img/Python.png' },
+    { order: 2, imageUrl: '/my-portofolio/assets/img/SpringBoot.png' },
+    { order: 3, imageUrl: '/my-portofolio/assets/img/Vue.png' },
+    { order: 0, imageUrl: '/my-portofolio/assets/img/Git.png'}
 ]
 
 </script>
