@@ -56,9 +56,9 @@ export default {
       for (let i = 0; i < text.length; i++) {
         setTimeout(() => {
           if (type === 'write') {
-            titleTextArr.push(text[i])
+            titleTextArr.value.push(text[i])
           } else {
-            titleTextArr.pop()
+            titleTextArr.value.pop()
           }
           if (i === titleText.length - 1) {
             setTimeout(() => {

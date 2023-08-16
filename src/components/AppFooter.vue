@@ -35,6 +35,9 @@
   </footer>
 </template>
 
+<script>
+</script>
+
 <style lang="scss" scoped>
 .footer {
   padding-top: 2rem;
